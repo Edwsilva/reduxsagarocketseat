@@ -10,6 +10,8 @@ const store = createStore(
   combineReducers({
     todos,
   }),
+
+  // Configurando o SAGA
   applyMiddleware(sagaMiddleware),
 );
 
