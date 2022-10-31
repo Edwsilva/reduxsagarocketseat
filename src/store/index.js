@@ -8,12 +8,14 @@ const sagaMiddleware = createSagaMiddleware();
 
 const store = createStore(
   combineReducers({
-    todos,
+    todos: todos,
   }),
 
   // Configurando o SAGA
+  //Preciso criar um arquivo de SAGA
   applyMiddleware(sagaMiddleware),
 );
+
 
 sagaMiddleware.run(rootSaga);
 
